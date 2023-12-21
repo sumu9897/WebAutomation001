@@ -12,12 +12,20 @@ public class OpenAWebPage extends DriverSetup {
 //        browser.get("https://github.com/sumu9897?tab=repositories");
 //    }
     @Test
-    public void openAPage(){
+    public void openTopTenPageAndTestTitle(){
 
 //        WebDriver browser = new FirefoxDriver();
         browser.get("https://www.toptenmartltd.com/");
 //        System.out.println(browser.getTitle());
-        Assert.assertEquals(browser.getTitle(),"Top Ten Mart – Top Fashion Brand in Banglades");
+        Assert.assertEquals(browser.getTitle(),"Top Ten Mart – Top Fashion Brand in Bangladesh");
+//        browser.close();
+    }
+    @Test
+    public void openGooglePageAndTestTitle(){
+
+
+        browser.get("https://google.com/");
+        Assert.assertEquals(browser.getTitle(),"Google");
 //        browser.close();
     }
 
